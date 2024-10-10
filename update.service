@@ -1,0 +1,13 @@
+[Unit]
+Description=Service de mise à jour automatique Ubuntu
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/scripts/update.sh
+User=root
+StandardOutput=append:/var/log/update-service.log
+StandardError=append:/var/log/update-service.log
+
+[Install]
+WantedBy=multi-user.target

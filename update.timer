@@ -1,0 +1,11 @@
+[Unit]
+Description=Planification du service de mise à jour automatique Ubuntu
+
+[Timer]
+OnCalendar=*-*-* 00..08:00:00
+OnCalendar=*-*-* 12:00:00
+OnCalendar=*-*-* 17:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
