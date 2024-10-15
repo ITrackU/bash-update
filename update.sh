@@ -72,6 +72,10 @@ find /var/tmp -type f -atime +10 -delete
 log_message "Nettoyage des journaux anciens..."
 journalctl --vacuum-time=30d >> "$LOG_FILE" 2>&1
 
+# Nettoyage des fichiers de log de plus de 7 jours
+log_message "Nettoyage des anciens fichiers de log des updates (plus de 7 jours)..."
+find /var/log/update/ -type f -name "*.log" -mtime +7 -exec rm {} \;
+
 # Mise à jour des microcodes CPU si nécessaire
 if [ -e /sys/devices/system/cpu/microcode/reload ]; then
     log_message "Mise à jour des microcodes CPU..."
