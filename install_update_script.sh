@@ -2,6 +2,8 @@
 # Supprimer les fichiers de service et du timer
 sudo rm -f /usr/lib/systemd/system/update.service
 sudo rm -f /usr/lib/systemd/system/update.timer
+sudo rm -f /etc/systemd/update.service
+sudo rm -f /etc/systemd/update.timer
 
 # Supprimer le script de mise à jour
 sudo rm -f /usr/local/scripts/update.sh
