@@ -1,4 +1,5 @@
 Linux Auto-Update Script
+
 Description
 
 Ce projet fournit un script  et des services Systemd pour automatiser les mises à jour du système sous Linux. Il effectue les tâches de maintenance courantes, y compris les mises à jour des paquets, le nettoyage des fichiers temporaires, et la vérification de l'intégrité du système. Le processus est planifié pour s'exécuter automatiquement à différentes heures de la journée.
